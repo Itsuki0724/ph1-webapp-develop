@@ -20,6 +20,28 @@ $(function(){
 	});
 });
 
+
+$(function(){
+
+	var open = $('.modal-open2'),
+		close = $('.modal-close'),
+		container = $('.modal-container');
+
+	open.on('click',function(){	
+		container.addClass('active');
+		return false;
+	});
+
+	close.on('click',function(){	
+		container.removeClass('active');
+	});
+
+	$(document).on('click',function(e) {
+		if(!$(e.target).closest('.modal-body').length) {
+			container.removeClass('active');
+		}
+	});
+});
 // var barChartData = {
 //     labels: ['','2','','4','','6','','8','','10','','12','','14','','16','','18','','20','','22','','24','','16','','28','','30'],
 //     datasets: [
