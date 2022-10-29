@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/reset.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+<body>
+    <header>
+        <div class="header-img"><img src="/webapp/assets/img/logo.svg" alt="posse-icon"></div>
+        <div class="header-week">4th week</div>
+        <button  class="modal-open">記録・投稿</button>
+        <div class="modal-container">
+            <div class="modal-body">
+                <div class="modal-close">×</div>
+                <div class="modal-content">
+                    <div class="modal-left-box">
+                        <div class="modal-date">
+                            <div class="modal-title">学習日</div>
+                            <!-- <div class="colender"><input type="date" min="2018-04-08" max="2050-1-1"></input></div> -->
+                            <!-- <input type="text" class="textbox-1"> -->
+                            <input type="date" min="2018-04-08" max="2050-1-1"></input>
+                        </div>
+                        <div class="modal-contents">
+                            <div class="modal-title">学習コンテンツ（複数選択可）</div>
+                            <input type="checkbox" class="modal-checkbox">N予備校
+                            <input type="checkbox" class="modal-checkbox">ドットインストール
+                            <br><input type="checkbox" class="modal-checkbox">POSSE課題
+                        </div>
+                        <div class="modal-laungage">
+                            <div class="modal-title">学習言語（複数選択可）</div>
+                            <input type="checkbox" class="modal-checkbox">HTML
+                            <input type="checkbox" class="modal-checkbox">CSS
+                            <input type="checkbox" class="modal-checkbox">javascript
+                            <br><input type="checkbox" class="modal-checkbox">PHP
+                            <input type="checkbox" class="modal-checkbox">Laravel
+                            <input type="checkbox" class="modal-checkbox">SQL
+                            <input type="checkbox" class="modal-checkbox">SHELL
+                            <br><input type="checkbox" class="modal-checkbox">情報システム基礎知識（その他）
+                        </div>
+                    </div>
+                    <div class="modal-right-box">
+                        <div class="modal-time">
+                            <div class="modal-title">学習時間</div>
+                            <input type="text" class="textbox-2">
+                        </div>
+                        <div class="modal-text">
+                            <div class="modal-title">Twitter用コメント</div>
+                            <input type="text" class="textbox-3" id="textbox3">
+                        </div>
+                        <div class="modal-share">
+                            <input type="checkbox" id="share">Twitterにシェアするニダ
+                        </div>
+                    </div>
+                    <div class="roading C"></div>
+                    <div class="complete " id="complete">
+                        <div class="complete-box">
+                            <div class="complete-img"><img src="/webapp/assets/img/complete.png"></div>
+                            <div class="complete-text-box">
+                                <p class="complete-text">記録・投稿<br>完了しました</p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                 <button class="modal-button" >記録・投稿</button>
+            </div>
+        </div>
+                 
+    </header>
+    <main>
+      <div class="main-page">
+        <div class="left-box">
+        <div class="Time">
+        <div class="Today">
+            <div class="Time_contents">
+                <div class="Topic">Today</div>
+                <div class="hour-number">3</div>
+                <div class="hour">hour</div>
+            </div>
+        </div>
+        <div class="Month">
+            <div class="Time_contents">
+                <div class="Topic">Month</div>
+                <div class="hour-number">120</div>
+                <div class="hour">hour</div>
+            </div>
+        </div>
+        <div class="Total">
+            <div class="Time_contents">
+                <div class="Topic">Total</div>
+                <div class="hour-number">1348</div>
+                <div class="hour">hour</div>
+            </div>
+        </div>
+        </div>
+
+      <div class="bar-graph">
+        <canvas id="bar-graph" class="canvas-graph"></canvas>
+      </div>
+    </div>
+    <div class="right-box">
+        <div class="Laungage">
+            <div class="Title">学習言語</div>
+
+
+            <canvas id="mychart-doughnut-1" class="doughnut-1"></canvas>
+        </div>
+
+
+
+        <div class="Contents">
+            <div class="Title">学習コンテンツ</div>
+
+
+            <canvas id="mychart-doughnut-2" class="doughnut-2"></canvas>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+      <div class="month_change">
+        2020年 10月
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/webapp/webapp.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+   </body>
+</html>
