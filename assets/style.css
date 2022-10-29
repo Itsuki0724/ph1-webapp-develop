@@ -403,6 +403,8 @@ main{
 @media(max-width:390px){
     
     .modal-open2{
+
+        
     border-radius: 100vh;
     padding:7px 90px 7px 90px;
     font-size: larger;
