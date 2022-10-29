@@ -396,4 +396,82 @@ main{
     .modal-open{
         display: none;
     }
+
+    .main-page{
+        display: block;
+        transform: translate(-2%);
+    }
+
+    .Today{
+        width: 100px;
+        margin-left: 2%;
+        height: 100px;
+    }
+    .Month{
+        width: 100px;
+        height: 100px;
+    }
+
+    .Total{
+        width: 100px;
+        height: 100px;
+    }
+    .left-box{
+        margin-left: 2%;
+        transform: translate(-100px);
+    }
+
+    .Topic{
+        font-size: 13px;
+    }
+
+    .hour-number{
+        font-size: 30px;
+        margin-top:5px;
+    }
+
+    .hour{
+        font-size: 15px;
+        margin-top: 5px;
+        transform: translate(20px);
+    }
+
+    .Time_contents{
+        transform: translate(-50px);
+    }
+
+    .topic1{
+        transform: translate(20px);
+    }
+
+    .hour-number1{
+        transform: translate(22px);
+    }
+
+    .bar-graph{
+        height: 200px;
+        width: 340px;
+    }
+
+    .canvas-graph{
+        padding-top: 20px;
+    }
+
+    .Laungage{
+        width: 180px;
+        height: 300px;
+    }
+
+    .dougnut-1{
+        margin-bottom: 20px;
+    }
+
+    .Contents{
+        width: 180px;
+        transform: translate(-18px);
+    }
+
+    .right-box{
+        margin-left: -30px;
+    }
 }  

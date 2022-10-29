@@ -170,7 +170,7 @@ var ctx = document.getElementById('mychart-doughnut-2');
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels:["N予備校","課題","ドットインストール","aaaaaaa","aaaaa"],
+    labels:["N予備校","課題","ドットインストール"],
     datasets: [{
       data: [40,40,20],
       backgroundColor: ['#0000ff','#4682B4','#00BFFF'],
