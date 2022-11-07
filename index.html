@@ -25,9 +25,20 @@
                     <div class="modal-left-box">
                         <div class="modal-date">
                             <div class="modal-title">学習日</div>
+                            <!-- <div class="wrapper C">
+                                <h1 id="header"></h1>
+                            
+                                <div id="next-prev-button">
+                                    <button id="prev" onclick="prev()">‹</button>
+                                    <button id="next" onclick="next()">›</button>
+                                </div>
+                            
+                                <div id="calendar"></div>
+                            </div> -->
                             <!-- <div class="colender"><input type="date" min="2018-04-08" max="2050-1-1"></input></div> -->
                             <!-- <input type="text" class="textbox-1"> -->
-                            <input type="date" min="2018-04-08" max="2050-1-1"></input>
+                            <input type="text" class="textbox-date" id="date">
+                            
                         </div>
                         <div class="modal-contents">
                             <div class="modal-title">学習コンテンツ（複数選択可）</div>
@@ -60,6 +71,18 @@
                             <input type="checkbox" id="share">Twitterにシェアするニダ
                         </div>
                     </div>
+                    <div class="wrapper C">
+                        <h1 id="header"></h1>
+                    
+                        <div id="next-prev-button">
+                            <button id="prev" onclick="prev()">‹</button>
+                            <button id="next" onclick="next()">›</button>
+                        </div>
+                    
+                        <div id="calendar"></div>
+
+                        <button class="modal-open-2">決定</button>
+                    </div>
                     <div class="roading C"></div>
                     <div class="complete " id="complete">
                         <div class="complete-box">
@@ -67,6 +90,7 @@
                             <div class="complete-text-box">
                                 <p class="complete-text">記録・投稿<br>完了しました</p>
                             </div>
+                    
                         </div>
                     </div>
                  </div>
