@@ -497,3 +497,133 @@ main{
         margin-left: -30px;
     }
 }  
+
+
+.wrapper{
+    max-width: 700px;
+    margin-left: 290px;
+}
+#header {
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    margin: 1rem 0 0;
+}
+
+/*カレンダー*/
+#calendar {
+    text-align: center;
+    width: 100%;
+}
+table {
+    outline: 2px solid white;
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    color:lightskyblue;
+    font-size: small;
+
+}
+th, td {
+    outline: 1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px; 
+    cursor: pointer;
+}
+/*日曜日*/
+td:first-child {
+    color: red;
+}
+/*土曜日*/
+td:last-child {
+    color: blue;
+}
+/*前後月の日付*/
+td.disabled {
+    color: #ccc;
+}
+/*本日*/
+td.today {
+    background-color: #D65E72;
+    color: #fff;
+}
+
+/*ボタン*/
+#next-prev-button {
+    position: relative;
+}
+#next-prev-button button{
+    cursor: pointer;
+    color:black;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+
+#prev {
+    float: left;
+}
+#next {
+    float: right;
+}
+
+.modal-open-2{
+    margin-left: 10%;
+    background-color: lightskyblue;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+
+.textbox-date{
+    width: 250px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: whitesmoke;
+}
+
+
+
+
+/* ラベルのスタイル　*/
+/* .modal-contents label {
+	padding-left:		38px;			/* ラベルの位置 */
+	/* font-size:		32px;
+	line-height:		32px;
+	display:		inline-block;
+	cursor:			pointer;
+	position:		relative;
+} */
+
+/* ボックスのスタイル */
+/* .modal-contents label:before {
+	content:		'';
+	width:			32px;			/* ボックスの横幅 */
+	/* height:			32px;			/* ボックスの縦幅 */
+	/* display:		inline-block;
+	position:		absolute;
+	left:			0;
+	background-color:	#fff;
+	box-shadow:		inset 1px 2px 3px 0px #000;
+	border-radius:		6px 6px 6px 6px; */ 
+/* } */ 
+/* 元のチェックボックスを表示しない */
+/* .modal-contents input[type=checkbox] {
+	display:		none;
+}
+チェックした時のスタイル */
+/* .modal-contents input[type=checkbox]:checked + label:before {
+	content:		'\2713';		/* チェックの文字 */ 
+	/* font-size:		34px;			/* チェックのサイズ */
+	/* color:			#fff;			/* チェックの色 */
+	/* background-color:	#06f;			チェックした時の色 
+
+
